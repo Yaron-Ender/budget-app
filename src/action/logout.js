@@ -4,11 +4,11 @@ import { UseLocalStorage } from '../hooks/useLocalStorage';
 import { toast } from 'react-toastify';
 
 export async function logoutAction () {
-const {deletItem} = UseLocalStorage()
+const {deleteItem} = UseLocalStorage()
 //deleteUser
-deletItem({key:'userName'})
-deletItem({key:'budgets'})
-deletItem({key:'expenses'})
+deleteItem({key:'userName'})
+deleteItem({key:'budgets'})
+deleteItem({key:'expenses'})
 toast.success("you've deleted your acount!")
 //redirect
   return redirect('/')
